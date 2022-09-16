@@ -93,6 +93,13 @@
   background-color:rgb(26, 26, 26);
 } */ 
 
+#title{
+  color: #00ff11;
+  font-size: 2em;
+  text-align: center;
+}
+
+
 .section{
   border: 2px solid #3d3f38;
   border-radius:6px;
@@ -100,8 +107,9 @@
   flex-direction: column;
   padding: 5px;
   margin-bottom:6px;
-  color: #07071c;
-  background-color: #497590;
+  margin-bottom: 6px;
+  color: #cff9fd;
+  background-color: #161718;
 }
 .section2{
   border: 2px solid #3d3f38;
@@ -120,7 +128,9 @@
 }
 
 #nav-console{
-  color: #c9cdc0;
+  color: #00ff11;
+  background-color: #0e0e0a;
+
 }
 
 #scene1{
@@ -182,7 +192,7 @@ button:active{
 
 #log1{
   display: none;
-  background-color: rgb(65, 184, 255);
+  background-color: #00ff11;
   border: none;
   border-radius: 0px;
   color: black;

@@ -1,22 +1,3 @@
-var socket = io();
-       
-socket.on('connection', function(data){
-    console.log(data);
-});
-// socket.on('data', function(data){
-//     console.log(data);
-//     document.getElementById('sample').style.opacity = data+"%"; 
-// });
-
-socket.on('node5', function(sensorData){
-    var reading = sensorData.message.decoded_payload.bytes[0]
-    console.log("Sensor Reading",reading);
-    // document.getElementById("file").value = sensor; 
-     if(reading==11){
-       alert('u won.');
-     }
-});
-
 var form = document.getElementById('form');
 var input = document.getElementById('input');
 
@@ -34,12 +15,12 @@ form.addEventListener('submit', function(e) {
 
     e.preventDefault();
     if (input.value) {
-        socket.emit('chat message', input.value);
+        // socket.emit('chat message', input.value);
         input.value = '';
         console.log(inputString);
     }
 
-    if (inputString.includes('9.1.13.')){
+    if (inputString.includes('ELBOW')){
         levelTwo();
         playTrack1();
         localStorage.setItem('gateway','1');
@@ -48,7 +29,7 @@ form.addEventListener('submit', function(e) {
         
     }
     
-     if (inputString.includes('16.18.15.')){
+     if (inputString.includes('NELBOW')){
         levelThree();
         playTrack1();
         localStorage.setItem('gateway','2');
