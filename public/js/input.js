@@ -12,73 +12,102 @@ form.addEventListener('submit', function(e) {
     dreamlog = document.querySelector('#dreamlog');
     back2 = document.querySelector('#back2');
     objective = document.querySelector('#objective');
+    var counter = 0;
+    loc1unlocked = false;
+    loc2unlocked = false;
+    loc3unlocked = false;
+    loc4unlocked = false;
+    loc5unlocked = false;
 
     e.preventDefault();
+    
     if (input.value) {
         // socket.emit('chat message', input.value);
         input.value = '';
         console.log(inputString);
     }
 
-    if (inputString.includes('ELBOW')){
-        levelTwo();
-        playTrack1();
+    if(counter == 1){
+
         localStorage.setItem('gateway','1');
         console.log(localStorage.getItem('gateway'));
-        loc1.play();
-        
+
     }
-    
-     if (inputString.includes('NELBOW')){
-        levelThree();
-        playTrack1();
+
+    else if(counter == 2) {
         localStorage.setItem('gateway','2');
         console.log(localStorage.getItem('gateway'));
-        loc2.play();
+
     }
 
-    if (inputString.includes('20.5.3.')){
-        levelFour();
-        playTrack1();
+    else if(counter == 3) {
         localStorage.setItem('gateway','3');
         console.log(localStorage.getItem('gateway'));
-        loc3.play();
+
     }
 
-    
-    if (inputString.includes('20.15.18')){
-        levelFive();
-        playTrack1();
+    else if(counter == 4) {
         localStorage.setItem('gateway','4');
         console.log(localStorage.getItem('gateway'));
-        loc4.play();
+
     }
 
-    if (inputString.includes('66')){
-        objective.style.display = "none";
-        dreamlog.style.display = "flex";
-        back2.style.display = "flex";
-        $("#dreamlog").text("This place works differently. Add all the port numbers you received together in the right order and translate them into letters to receive a message. Enter the message to unlock the final log.");
-        playTrack1();
+    else if(counter == 5) {
         localStorage.setItem('gateway','5');
         console.log(localStorage.getItem('gateway'));
-        console.log("stage 5");
-        inputString = '';
-        
-    }
 
-    if (inputString.includes('I AM PROTECTOR')){
-        levelSix();
+    }
+    
+     if (inputString.includes('1') && loc1unlocked == false){
         playTrack1();
-        localStorage.setItem('gateway','6');
-        console.log(localStorage.getItem('gateway'));
-        loc5.play();
+        counter++;
+        loc1unlocked = true;
+        console.log('loc1 unlocked');
+        onsole.log(counter);
+        inputString = '';
+        dreamlog.style.display = "none";
+        back2.style.display = "none";
+        objective.style.display = "flex";
     }
-    else{
-        $("#input").text("inactive port");
 
+    if (inputString.includes('2') && loc2unlocked == false){
+        playTrack1();
+        counter++;
+        loc2unlocked = true;
+    }
+
+    if (inputString.includes('3') && loc3unlocked == false){
+        playTrack1();
+        counter++;
+        loc3unlocked = true;
+    }
+
+    if (inputString.includes('4') && loc4unlocked == false){
+        playTrack1();
+        counter++;
+        loc4unlocked = true;
+    }
+
+    if (inputString.includes('5') && loc5unlocked == false){
+        playTrack1();
+        counter++;
+        loc5unlocked = true;
     }
 }); 
+
+
+//     if (inputString.includes('I AM PROTECTOR')){
+//         levelSix();
+//         playTrack1();
+//         localStorage.setItem('gateway','6');
+//         console.log(localStorage.getItem('gateway'));
+//         loc5.play();
+//     }
+//     else{
+//         $("#input").text("inactive port");
+
+//     }
+// }); 
 
 zoommap = document.querySelector('#zoommap');
 log = document.querySelector('#log');
@@ -87,6 +116,7 @@ back = document.querySelector('#back');
 back2 = document.querySelector('#back2');
 dreamlog = document.querySelector('#dreamlog');
 objective = document.querySelector('#objective');
+
 
 
 function showLog(){                          
