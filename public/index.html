@@ -30,13 +30,12 @@
                         <span><form id="form" action="">
                             <input id="input" autocomplete="off" onkeyup="this.value = this.value.toUpperCase();"/><button>>>></button>
                         </form></span> 
-                     </div>
-
-                  
-                       <div class="section" id="dreammap">
-                              <img src="img/map-white.png">
-     
-                         </div>
+                      </div>
+                      <div class="section" id="pentagram">
+                        <img id="pentagram-locked" src="img/pentagram-locked.png">
+                        <img id="pentagram-unlocked" src="img/pentagram-unlocked.png">
+    
+                             </div>   
 
                         <div class="section" id="nav-console">
                             
@@ -66,6 +65,7 @@
                         <div class="section" id="dreamlog">
                             <p></p>  
                             </div>
+
                             <div class="section" id="back2" onclick="backAgain2()">
                                 ↪ log 
                         </div>
@@ -96,6 +96,13 @@
                            <div class="section" id="back" onclick="backAgain()">
                               ↪
                            </div>
+                           <div class="section" id="dreammap">
+                            <img src="img/map-white.png">
+   
+                       </div>
+                                                  
+   
+  
                            <!-- <div class="section2">
                               <div class="button-base">
                                     <p onclick="showHelp()">HELP</p>
@@ -105,7 +112,6 @@
                               </div>
                            </div> -->
                     </div>
-                       
 
             
             <div class="flex-right">
@@ -138,28 +144,36 @@
          if (localStorage.getItem("gateway")!==null){
              
            if(localStorage.getItem("gateway") == "1") {
-            levelTwo();
+            // levelTwo(); 
+            counter = 1;
            } 
           
            if(localStorage.getItem("gateway") == "2") {
-             levelThree();
+            //  levelThree();
+            counter = 2;
            } 
 
            if(localStorage.getItem("gateway") == "3") {
-             levelFour();
+            //  levelFour();
+            counter = 3;
            } 
 
            if(localStorage.getItem("gateway") == "4") {
-             levelFive();
+            //  levelFive();
+            counter = 4;
            } 
 
            
            if(localStorage.getItem("gateway") == "5") {
-             levelFive();
+            //  levelFive();
+            counter = 5;
+            document.getElementById("pentagram-locked").style.display = none;
+            document.getElementById("pentagram-unlocked").style.display = block;
            } 
 
            if(localStorage.getItem("gateway") == "6") {
-             levelSix();
+            //  levelSix();
+            
            } 
 
          }else {levelOne()}; 

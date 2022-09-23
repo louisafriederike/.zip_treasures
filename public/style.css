@@ -8,7 +8,7 @@
     font: 1.0em/1.6 'Inconsolata', monospace;
     color:  #c9cdc0;
     font-weight: 400;
-    background-color: rgb(228, 226, 234);
+    background-color: black;
     text-shadow: rgb(34, 255, 0);
     /* overflow-y: hidden;
     overflow-x: hidden; */
@@ -78,7 +78,7 @@
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 10px;
-  background-color: rgb(228, 226, 234);
+  background-color: black;
 
 }
 
@@ -101,14 +101,14 @@
 
 
 .section{
-  border: 2px solid #3d3f38;
+  border: 2px solid #a8ac2d;
   border-radius:6px;
   display: flex;
   flex-direction: column;
   padding: 5px;
   margin-bottom:6px;
   margin-bottom: 6px;
-  color: #cff9fd;
+  color: #b0d6d9;
   background-color: #3b3e50;
 }
 .section2{
@@ -328,15 +328,29 @@ button:active{
   max-width: 450px;
   }
 
-    .fullscreen-video {
-      position: fixed;
-      overflow: hidden;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      transform: translateX(-50%) translateY(-50%);
-      z-index: -10;
-    }
+  .fullscreen-video {
+    position: fixed;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -10;
+  }
+
+  #pentagram{
+    background-color: #121213;
+  }
+
+  #pentagram-locked{
+    background-color: #121213;
+    display: block;
+  }
+
+  #pentagram-unlocked{
+    background-color: #121213;
+    display: none;
+  }

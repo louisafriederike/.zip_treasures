@@ -18,6 +18,14 @@ form.addEventListener('submit', function(e) {
     loc3unlocked = false;
     loc4unlocked = false;
     loc5unlocked = false;
+    var form = document.getElementById('form');
+var input = document.getElementById('input');
+var loc1 = new Audio('audio/loc1.WAV');
+var loc2 = new Audio('audio/loc2.WAV');
+var loc3 = new Audio('audio/loc3.wav');
+var loc4 = new Audio('audio/loc4.wav');
+var loc5 = new Audio('audio/loc5.wav');
+
 
     e.preventDefault();
     
@@ -31,6 +39,8 @@ form.addEventListener('submit', function(e) {
 
         localStorage.setItem('gateway','1');
         console.log(localStorage.getItem('gateway'));
+
+
 
     }
 
@@ -63,35 +73,72 @@ form.addEventListener('submit', function(e) {
         counter++;
         loc1unlocked = true;
         console.log('loc1 unlocked');
-        onsole.log(counter);
+        console.log(counter);
         inputString = '';
         dreamlog.style.display = "none";
         back2.style.display = "none";
         objective.style.display = "flex";
+        dreamlog.style.display = "flex";
+        $("#dreamlog").text("log 1"); 
     }
 
-    if (inputString.includes('2') && loc2unlocked == false){
+    if (inputString.includes('DEVOTION') && loc2unlocked == false){
         playTrack1();
         counter++;
         loc2unlocked = true;
+        console.log('loc2 unlocked');
+        console.log(counter);
+        inputString = '';
+        dreamlog.style.display = "none";
+        back2.style.display = "none";
+        objective.style.display = "flex";
+        dreamlog.style.display = "flex";
+        $("#dreamlog").text("log 2"); 
     }
 
-    if (inputString.includes('3') && loc3unlocked == false){
+    if (inputString.includes('SALVATION') && loc3unlocked == false){
         playTrack1();
         counter++;
         loc3unlocked = true;
+        console.log('loc3 unlocked');
+        console.log(counter);
+        inputString = '';
+        dreamlog.style.display = "none";
+        back2.style.display = "none";
+        objective.style.display = "flex";
+        dreamlog.style.display = "flex";
+        $("#dreamlog").text("log 3"); 
     }
 
     if (inputString.includes('4') && loc4unlocked == false){
         playTrack1();
         counter++;
         loc4unlocked = true;
+        console.log('loc4 unlocked');
+        console.log(counter);
+        inputString = '';
+        dreamlog.style.display = "none";
+        back2.style.display = "none";
+        objective.style.display = "flex";
+        dreamlog.style.display = "flex";
+        $("#dreamlog").text("log 4"); 
     }
 
     if (inputString.includes('5') && loc5unlocked == false){
         playTrack1();
         counter++;
         loc5unlocked = true;
+        console.log('loc5 unlocked');
+        console.log('unlocked locations:');
+        console.log(counter);
+        inputString = '';
+        dreamlog.style.display = "none";
+        back2.style.display = "none";
+        objective.style.display = "flex";
+        document.getElementById("pentagram-locked").style.display = none;
+        document.getElementById("pentagram-unlocked").style.display = block;
+        dreamlog.style.display = "flex";
+        $("#dreamlog").text("log 5"); 
     }
 }); 
 
