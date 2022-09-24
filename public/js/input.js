@@ -166,10 +166,36 @@ form.addEventListener('submit', function(e) {
         back2.style.display = "flex";
         objective.style.display = "none";
         dreamlog.style.display = "flex";
-        document.getElementById("pentagram-locked").style.display = none;
-        document.getElementById("pentagram-unlocked").style.display = block;
+        // document.getElementById("pentagram-locked").style.display = none;
+        // document.getElementById("pentagram-unlocked").style.display = block;
         $("#dreamlog").text("log 5"); 
         log5.style.display = "flex";
+    }
+
+    if (loc1unlocked == true && loc2unlocked == true && loc3unlocked == true && loc4unlocked == true && loc5unlocked == true){
+        playTrack1();
+        loc5unlocked = true;
+        console.log('finished');
+        inputString = '';
+        back2.style.display = "none";
+        objective.style.display = "flex";
+        dreamlog.style.display = "none";
+        document.getElementById("uuid-faffbd01-47ef-4272-89ac-d31673ff6396").style.display = "none";
+        document.getElementById("uuid-28306325-d7ee-4a42-90d2-ebed74a80342").style.display = "block";
+        $("#objective").text("krkrkkkKKKKk zZZZZZ  ...Quick!! Find me here wearing the final symbol and show me the full pentagram to taste the secret potion!!!");
+    }
+
+    if (inputString.includes('END')){
+        playTrack1();
+        loc5unlocked = true;
+        console.log('finished');
+        inputString = '';
+        back2.style.display = "none";
+        objective.style.display = "flex";
+        dreamlog.style.display = "none";
+        document.getElementById("uuid-faffbd01-47ef-4272-89ac-d31673ff6396").style.display = "none";
+        document.getElementById("uuid-28306325-d7ee-4a42-90d2-ebed74a80342").style.display = "block";
+        $("#objective").text("krkrkkkKKKKk zZZZZZ  ...Quick!! Find me here wearing the final symbol and show me the full pentagram to taste the secret potion!!!");
     }
 }); 
 
@@ -436,7 +462,7 @@ function objective3(){
 function objective4(){
     // var music2 = new Audio('./audio/breadcrumb.mp3');
     $("#objective").text("You are at Drift12. I found, it's not just a matter of perspective, but of light and colour, addition and detraction.");
-    music2.play();
+    // music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
 }

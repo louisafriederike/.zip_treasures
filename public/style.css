@@ -228,6 +228,7 @@ button:active{
   padding: 1px;
   padding-left: 6px;
 }
+
 #log5{
   display: none;
   background-color: rgb#00ff11;
@@ -240,31 +241,31 @@ button:active{
 
 #log1:active{
 
-  background-color: rgb(129, 135, 121);
+  background-color: #6fad38;
 
 }
 
 #log2:active{
 
-  background-color: rgb(129, 135, 121);
+  background-color: #6fad38;
 
 }
 
 #log3:active{
 
-  background-color: rgb(129, 135, 121);
+  background-color: #6fad38;
 
 }
 
 #log4:active{
 
-  background-color: rgb(129, 135, 121);
+  background-color: #6fad38;
 
 }
 
 #log5:active{
 
-  background-color: rgb(129, 135, 121);
+  background-color: #6fad38;
 
 }
 
@@ -369,4 +370,13 @@ button:active{
   .column {
     flex: 33.33%;
     padding: 5px;
+  }
+
+  #uuid-faffbd01-47ef-4272-89ac-d31673ff6396{
+
+    display: block;
+  }
+
+  #uuid-28306325-d7ee-4a42-90d2-ebed74a80342{
+    display: none;
   }
