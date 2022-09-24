@@ -445,7 +445,7 @@ function objective1(){
 
 function objective2(){
     // var music2 = new Audio('./audio/breadcrumb.mp3');
-    $("#objective").text("I used to buy my cigars here. It was a beautiful place to puff my life away. See the little shop? Ask for Louie's order to discover my secret recipe.");
+    $("#objective").text("Welcome to Extra Practice at Zwaanshals 209. I used to buy my cigars here. It was a beautiful place to puff my life away. See the little shop? Ask for Louie's order to discover my secret recipe.");
     // music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
@@ -453,7 +453,7 @@ function objective2(){
 
 function objective3(){
     // var music2 = new Audio('./audio/breadcrumb.mp3');
-    $("#objective").text("Welcome to verfris. I used to find peace here, spending hours and hours in the garden, watching time pass by. In rotation lies the secret to my peace.");
+    $("#objective").text("Welcome to Verfris at Zaagmolenstraat 129A. I used to find peace here, spending hours and hours in the garden, watching time pass by. In rotation lies the secret to my peace.");
     // music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
@@ -461,7 +461,7 @@ function objective3(){
 
 function objective4(){
     // var music2 = new Audio('./audio/breadcrumb.mp3');
-    $("#objective").text("You are at Drift12. I found, it's not just a matter of perspective, but of light and colour, addition and detraction.");
+    $("#objective").text("You are at Drift12 at Zaagmolendrift 12. I found, it's not just a matter of perspective, but of light and colour, addition and detraction.");
     // music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
@@ -469,7 +469,7 @@ function objective4(){
 
 function objective5(){
     // var music2 = new Audio('./audio/breadcrumb.mp3');
-    $("#objective").text("You are inside de stu. Here, I have hidden a secret. Two parts becoming one, identical symbols large and small. Here is where the answer lies.");
+    $("#objective").text("You are inside DE STU at Kromme Wiekstraat 25. Here, I have hidden a secret. Two parts becoming one, identical symbols large and small. Here is where the answer lies.");
     // music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
