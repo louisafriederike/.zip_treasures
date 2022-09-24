@@ -203,7 +203,7 @@ button:active{
 
 #log2{
   display: none;
-  background-color: rgb(65, 184, 255);
+  background-color: #00ff11;
   color: black;
   border-radius: 0px;
   border: none;
@@ -212,7 +212,7 @@ button:active{
 }
 #log3{
   display: none;
-  background-color: rgb(65, 184, 255);
+  background-color: #00ff11;
   color: black;
   border-radius: 0px;
   border: none;
@@ -221,7 +221,7 @@ button:active{
 }
 #log4{
   display: none;
-  background-color: rgb(65, 184, 255);
+  background-color: #00ff11;
   color: black;
   border-radius: 0px;
   border: none;
@@ -230,7 +230,7 @@ button:active{
 }
 #log5{
   display: none;
-  background-color: rgb(65, 184, 255);
+  background-color: rgb#00ff11;
   color: black;
   border-radius: 0px;
   border: none;
@@ -353,4 +353,20 @@ button:active{
   #pentagram-unlocked{
     background-color: #121213;
     display: none;
+  }
+
+  .icon{
+
+    max-width: 60vw;
+    display: inline-block;
+  }
+
+  .row {
+    display: flex;
+  }
+  
+  /* Create three equal columns that sits next to each other */
+  .column {
+    flex: 33.33%;
+    padding: 5px;
   }

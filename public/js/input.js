@@ -19,12 +19,12 @@ form.addEventListener('submit', function(e) {
     loc4unlocked = false;
     loc5unlocked = false;
     var form = document.getElementById('form');
-var input = document.getElementById('input');
-var loc1 = new Audio('audio/loc1.WAV');
-var loc2 = new Audio('audio/loc2.WAV');
-var loc3 = new Audio('audio/loc3.wav');
-var loc4 = new Audio('audio/loc4.wav');
-var loc5 = new Audio('audio/loc5.wav');
+    var input = document.getElementById('input');
+    var loc1 = new Audio('audio/loc1.WAV');
+    var loc2 = new Audio('audio/loc2.WAV');
+    var loc3 = new Audio('audio/loc3.wav');
+    var loc4 = new Audio('audio/loc4.wav');
+    var loc5 = new Audio('audio/loc5.wav');
 
 
     e.preventDefault();
@@ -34,52 +34,80 @@ var loc5 = new Audio('audio/loc5.wav');
         input.value = '';
         console.log(inputString);
     }
+    if(loc1unlocked == true){
 
-    if(counter == 1){
+        localStorage.setItem('gateway1','1');
+        console.log(localStorage.getItem('gateway 1 unlocked'));
+    }
 
-        localStorage.setItem('gateway','1');
-        console.log(localStorage.getItem('gateway'));
-
-
+    if(loc2unlocked == true) {
+        localStorage.setItem('gateway2','1');
+        console.log(localStorage.getItem('gateway 2 unlocked'));
 
     }
 
-    else if(counter == 2) {
-        localStorage.setItem('gateway','2');
-        console.log(localStorage.getItem('gateway'));
+    if(loc3unlocked == true) {
+        localStorage.setItem('gateway3','1');
+        console.log(localStorage.getItem('gateway 3 unlocked'));
 
     }
 
-    else if(counter == 3) {
-        localStorage.setItem('gateway','3');
-        console.log(localStorage.getItem('gateway'));
+    if(loc4unlocked == true) {
+        localStorage.setItem('gateway4','1');
+        console.log(localStorage.getItem('gateway 4 unlocked'));
 
     }
 
-    else if(counter == 4) {
-        localStorage.setItem('gateway','4');
-        console.log(localStorage.getItem('gateway'));
+   if(loc5unlocked == true) {
+    localStorage.setItem('gateway5','1');
+    console.log(localStorage.getItem('gateway 5 unlocked'));
 
     }
 
-    else if(counter == 5) {
-        localStorage.setItem('gateway','5');
-        console.log(localStorage.getItem('gateway'));
+    // if(counter == 1){
 
-    }
+    //     localStorage.setItem('gateway','1');
+    //     console.log(localStorage.getItem('gateway'));
+    // }
+
+    // else if(counter == 2) {
+    //     localStorage.setItem('gateway','2');
+    //     console.log(localStorage.getItem('gateway'));
+
+    // }
+
+    // else if(counter == 3) {
+    //     localStorage.setItem('gateway','3');
+    //     console.log(localStorage.getItem('gateway'));
+
+    // }
+
+    // else if(counter == 4) {
+    //     localStorage.setItem('gateway','4');
+    //     console.log(localStorage.getItem('gateway'));
+
+    // }
+
+    // else if(counter == 5) {
+    //     localStorage.setItem('gateway','5');
+    //     console.log(localStorage.getItem('gateway'));
+
+    // }
+
     
      if (inputString.includes('1') && loc1unlocked == false){
         playTrack1();
         counter++;
         loc1unlocked = true;
         console.log('loc1 unlocked');
+        console.log('unlocked locations:');
         console.log(counter);
         inputString = '';
-        dreamlog.style.display = "none";
-        back2.style.display = "none";
-        objective.style.display = "flex";
+        back2.style.display = "flex";
+        objective.style.display = "none";
         dreamlog.style.display = "flex";
         $("#dreamlog").text("log 1"); 
+        log1.style.display = "flex";
     }
 
     if (inputString.includes('DEVOTION') && loc2unlocked == false){
@@ -87,13 +115,14 @@ var loc5 = new Audio('audio/loc5.wav');
         counter++;
         loc2unlocked = true;
         console.log('loc2 unlocked');
+        console.log('unlocked locations:');
         console.log(counter);
         inputString = '';
-        dreamlog.style.display = "none";
-        back2.style.display = "none";
-        objective.style.display = "flex";
+        back2.style.display = "flex";
+        objective.style.display = "none";
         dreamlog.style.display = "flex";
         $("#dreamlog").text("log 2"); 
+        log2.style.display = "flex";
     }
 
     if (inputString.includes('SALVATION') && loc3unlocked == false){
@@ -101,13 +130,14 @@ var loc5 = new Audio('audio/loc5.wav');
         counter++;
         loc3unlocked = true;
         console.log('loc3 unlocked');
+        console.log('unlocked locations:');
         console.log(counter);
         inputString = '';
-        dreamlog.style.display = "none";
-        back2.style.display = "none";
-        objective.style.display = "flex";
+        back2.style.display = "flex";
+        objective.style.display = "none";
         dreamlog.style.display = "flex";
         $("#dreamlog").text("log 3"); 
+        log3.style.display = "flex";
     }
 
     if (inputString.includes('4') && loc4unlocked == false){
@@ -115,13 +145,14 @@ var loc5 = new Audio('audio/loc5.wav');
         counter++;
         loc4unlocked = true;
         console.log('loc4 unlocked');
+        console.log('unlocked locations:');
         console.log(counter);
         inputString = '';
-        dreamlog.style.display = "none";
-        back2.style.display = "none";
-        objective.style.display = "flex";
+        back2.style.display = "flex";
+        objective.style.display = "none";
         dreamlog.style.display = "flex";
         $("#dreamlog").text("log 4"); 
+        log4.style.display = "flex";
     }
 
     if (inputString.includes('5') && loc5unlocked == false){
@@ -132,13 +163,13 @@ var loc5 = new Audio('audio/loc5.wav');
         console.log('unlocked locations:');
         console.log(counter);
         inputString = '';
-        dreamlog.style.display = "none";
-        back2.style.display = "none";
-        objective.style.display = "flex";
+        back2.style.display = "flex";
+        objective.style.display = "none";
+        dreamlog.style.display = "flex";
         document.getElementById("pentagram-locked").style.display = none;
         document.getElementById("pentagram-unlocked").style.display = block;
-        dreamlog.style.display = "flex";
         $("#dreamlog").text("log 5"); 
+        log5.style.display = "flex";
     }
 }); 
 
@@ -379,41 +410,41 @@ function breadCrumb11(){
 }
 
 function objective1(){
-    var music2 = new Audio('./audio/breadcrumb.mp3');
-    $("#objective").text("Welcome to the Gallery. Take your time, look around. When you are ready, notice the little transparent module mounted on the wall in the corner. Turn the knob to 55 and keep it steady there for a moment until a number code is revealed. Enter it in the port above, with attention to the dots, to unlock the first dream log.");
-    music2.play();
+    // var music2 = new Audio('./audio/breadcrumb.mp3');
+    $("#objective").text("Welcome to the .zip at Pijnackerstraat 75. Take your time, look around. On a computer, I have stored the files needed to unlock my findings in this place.");
+    // music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
 }
 
 function objective2(){
-    var music2 = new Audio('./audio/breadcrumb.mp3');
-    $("#objective").text("You have entered the second gateway. The code is hidden on a metal door locking in high voltage. You will see three digits, loose the first to get the code.");
-    music2.play();
+    // var music2 = new Audio('./audio/breadcrumb.mp3');
+    $("#objective").text("I used to buy my cigars here. It was a beautiful place to puff my life away. See the little shop? Ask for Louie's order to discover my secret recipe.");
+    // music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
 }
 
 function objective3(){
-    var music2 = new Audio('./audio/breadcrumb.mp3');
-    $("#objective").text(" Welcome to Gateway 3. The module is located on yellow. Hidden on a number wheel in a window close by, you will find the code spelled out in large letters. Loose the first digit.");
-    music2.play();
+    // var music2 = new Audio('./audio/breadcrumb.mp3');
+    $("#objective").text("Welcome to verfris. I used to find peace here, spending hours and hours in the garden, watching time pass by. In rotation lies the secret to my peace.");
+    // music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
 }
 
 function objective4(){
-    var music2 = new Audio('./audio/breadcrumb.mp3');
-    $("#objective").text("The code is hidden on a tag on a small metal staircase: OCTOZILLA, followed by four digits. Loose the first two. The module is not far.");
+    // var music2 = new Audio('./audio/breadcrumb.mp3');
+    $("#objective").text("You are at Drift12. I found, it's not just a matter of perspective, but of light and colour, addition and detraction.");
     music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
 }
 
 function objective5(){
-    var music2 = new Audio('./audio/breadcrumb.mp3');
-    $("#objective").text("The code is hidden on a sign next to a yellow bench. Port of Rotterdam. Loose the first digit. The module is hidden out of sight, facing the house boat.");
-    music2.play();
+    // var music2 = new Audio('./audio/breadcrumb.mp3');
+    $("#objective").text("You are inside de stu. Here, I have hidden a secret. Two parts becoming one, identical symbols large and small. Here is where the answer lies.");
+    // music2.play();
     objective.style.display = "flex";
     dreamlog.style.display = "none";
 }
